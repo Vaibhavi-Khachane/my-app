@@ -1,9 +1,10 @@
 import React from 'react';
-function Form() {
+import './form.css';
+const Form = ()=> {
 return(
-    <div className = "container-sm border rounded border-info mx-auto">
-        <h1 className = "text-center text-info bg-dark rounded m-1">Registration Form</h1>
-        <form>
+    <div className = "container-sm border rounded border-info mx-auto w-50 mt-5">
+        <h1 className = "text-center text-info bg-dark rounded m-1 mt-3">Registration Form</h1>
+        <form method = "POST">
             <div className = "form-group">
                 <label for="Name" className = "m-2">Name</label>
                 <input type="text" className="form-control" id="Name" placeholder="Enter Name"></input>
@@ -17,6 +18,11 @@ return(
             <div className = "form-group">
                 <label for="Password" className = "m-2">Password</label>
                 <input type="password" className="form-control" id="Password" placeholder="Enter Password"></input>
+            </div>
+
+            <div className = "form-group">
+                <label for="Dob" className = "m-2">Date of Birth</label>
+                <input type="date" className="form-control" id="Dob" placeholder="Enter Dob"></input>
             </div>
 
             <div className="form-group">
@@ -48,10 +54,9 @@ return(
             <input className="form-check-input" type="radio" name="gender" id="Radio3" value="option3"/>
             <label className="form-check-label" for="inlineRadio1">Other</label>
         </div>
-
-    
-        Select Hobby
-        <div className="form-check m-1">
+        <br></br><br></br>
+        <label for = "hobby">Select Hobby</label>
+        <div className="form-check m-1">  
             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
             <label className="form-check-label" for="flexCheckDefault">
                 Playing
@@ -71,10 +76,12 @@ return(
                 Drawing
             </label>
         </div>
+        <div className = "d-flex justify-content-center">
+           <input className="m-5 pr-3 p-3 w-25 btn btn-primary" type="submit" value="Submit"/>
+           <input className="m-5 pr-3 p-3 w-25 btn btn-primary" type="reset" value="Reset"/>
+        </div>
 
-
-        <button type="submit" className="btn btn-primary btn-lg m-2">Submit</button>
-        </form>
+    </form>
 
     </div>
 );
